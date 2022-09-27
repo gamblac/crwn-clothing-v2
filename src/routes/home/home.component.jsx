@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom';
 import Directory from "../../components/directory/directory.components";
 import "../../categories.styles.scss";
 
@@ -31,7 +32,10 @@ const Home = () => {
   ];
 
   return (
-    <Directory categories={categories}/>
+    <div>
+      <Outlet></Outlet>
+      <Directory categories={categories}/>
+    </div>
 
   );
 };
